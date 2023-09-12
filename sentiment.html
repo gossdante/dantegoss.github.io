@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>364423</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="news-sentiment" class="cell markdown">
+<h2>News Sentiment</h2>
+</section>
+<section id="manage-api-key--use-newsapiclient" class="cell markdown">
+<h1>Manage API Key &amp; Use NewsApiClient</h1>
+<p>I've saved my API key in a config file, I've loaded the file and saved my key to a variable.</p>
+</section>
+<div class="cell code" data-execution_count="248">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> config</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>APIKEY<span class="op">=</span>config.APIKEY</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> newsapi <span class="im">import</span> NewsApiClient</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>newsapi <span class="op">=</span> NewsApiClient(api_key<span class="op">=</span>APIKEY)</span></code></pre></div>
+</div>
+<section id="what-are-the-available-sources" class="cell markdown">
+<h1>What are the available sources?</h1>
+<p>I've created a loop to gather all the available sources and save into a dataframe. For clarity sake I've printed the available sources as well as the categories.</p>
+</section>
+<div class="cell code" data-execution_count="249">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sources <span class="op">=</span> newsapi.get_sources()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;How many total sources are available?:&#39;</span>,<span class="bu">len</span>(sources[<span class="st">&#39;sources&#39;</span>]))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>total_sources <span class="op">=</span> <span class="bu">len</span>(sources[<span class="st">&#39;sources&#39;</span>])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sources[<span class="st">&#39;sources&#39;</span>][<span class="dv">0</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span><span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;id&#39;</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>name<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;name&#39;</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>description<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;description&#39;</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>url<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;url&#39;</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>category<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;category&#39;</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>language<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;language&#39;</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>country<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;country&#39;</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#column_names = [&#39;id&#39;, &#39;name&#39;, &#39;description&#39;, &#39;url&#39;, &#39;category&#39;, &#39;language&#39;, &#39;country&#39;]</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx,outlet <span class="kw">in</span> <span class="bu">enumerate</span>(sources[<span class="st">&#39;sources&#39;</span>]):</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span>[idx]<span class="op">=</span>outlet[<span class="st">&#39;id&#39;</span>]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    name[idx] <span class="op">=</span> outlet[<span class="st">&#39;name&#39;</span>]</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    description[idx] <span class="op">=</span> outlet[<span class="st">&#39;description&#39;</span>]</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    url[idx] <span class="op">=</span> outlet[<span class="st">&#39;url&#39;</span>]</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    category[idx] <span class="op">=</span> outlet[<span class="st">&#39;category&#39;</span>]</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    language[idx] <span class="op">=</span> outlet[<span class="st">&#39;language&#39;</span>]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    country[idx] <span class="op">=</span> outlet[<span class="st">&#39;country&#39;</span>]</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>sourcedf<span class="op">=</span>pd.concat([<span class="bu">id</span>,name,description,url,category,language,country],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;What are the categories? &#39;</span>, sourcedf[<span class="st">&#39;category&#39;</span>].unique())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>How many total sources are available?: 128
+What are the categories?  [&#39;general&#39; &#39;business&#39; &#39;technology&#39; &#39;sports&#39; &#39;entertainment&#39; &#39;health&#39;
+ &#39;science&#39;]
+</code></pre>
+</div>
+</div>
+<section id="filter-the-available-sources" class="cell markdown">
+<h1>Filter the available sources</h1>
+<p>Requirements: English Language, US Country</p>
+</section>
+<div class="cell code" data-execution_count="250">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sourcedf<span class="op">=</span> sourcedf[(sourcedf[<span class="st">&#39;language&#39;</span>]<span class="op">==</span><span class="st">&#39;en&#39;</span>) <span class="op">&amp;</span> (sourcedf[<span class="st">&#39;country&#39;</span>]<span class="op">==</span><span class="st">&#39;us&#39;</span>)]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>sourcedf.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="250">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>name</th>
+      <th>description</th>
+      <th>url</th>
+      <th>category</th>
+      <th>language</th>
+      <th>country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>abc-news</td>
+      <td>ABC News</td>
+      <td>Your trusted source for breaking news, analysi...</td>
+      <td>https://abcnews.go.com</td>
+      <td>general</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>al-jazeera-english</td>
+      <td>Al Jazeera English</td>
+      <td>News, analysis from the Middle East and worldw...</td>
+      <td>http://www.aljazeera.com</td>
+      <td>general</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ars-technica</td>
+      <td>Ars Technica</td>
+      <td>The PC enthusiast's resource. Power users and ...</td>
+      <td>http://arstechnica.com</td>
+      <td>technology</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>associated-press</td>
+      <td>Associated Press</td>
+      <td>The AP delivers in-depth coverage on the inter...</td>
+      <td>https://apnews.com/</td>
+      <td>general</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>axios</td>
+      <td>Axios</td>
+      <td>Axios are a new media company delivering vital...</td>
+      <td>https://www.axios.com</td>
+      <td>general</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<section id="what-are-the-business-sources" class="cell markdown">
+<h1>What are the business sources?</h1>
+<p>First we isolate the business sources based on the category variable. I've displayed the number of business sources as a sanity check, as well as tested that the indexing was working correctly.</p>
+</section>
+<div class="cell code" data-execution_count="251">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>business_sources <span class="op">=</span> sourcedf[sourcedf[<span class="st">&#39;category&#39;</span>]<span class="op">==</span><span class="st">&#39;business&#39;</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>business_sources <span class="op">=</span> business_sources.reset_index()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>display(business_sources)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Number of sources: &#39;</span>,<span class="bu">len</span>(business_sources))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#business_sources[&#39;id&#39;][0]</span></span></code></pre></div>
+<div class="output display_data">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>id</th>
+      <th>name</th>
+      <th>description</th>
+      <th>url</th>
+      <th>category</th>
+      <th>language</th>
+      <th>country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>16</td>
+      <td>bloomberg</td>
+      <td>Bloomberg</td>
+      <td>Bloomberg delivers business and markets news, ...</td>
+      <td>http://www.bloomberg.com</td>
+      <td>business</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>18</td>
+      <td>business-insider</td>
+      <td>Business Insider</td>
+      <td>Business Insider is a fast-growing business si...</td>
+      <td>http://www.businessinsider.com</td>
+      <td>business</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>36</td>
+      <td>fortune</td>
+      <td>Fortune</td>
+      <td>Fortune 500 Daily and Breaking Business News</td>
+      <td>http://fortune.com</td>
+      <td>business</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>117</td>
+      <td>the-wall-street-journal</td>
+      <td>The Wall Street Journal</td>
+      <td>WSJ online coverage of breaking news and curre...</td>
+      <td>http://www.wsj.com</td>
+      <td>business</td>
+      <td>en</td>
+      <td>us</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="output stream stdout">
+<pre><code>Number of sources:  4
+</code></pre>
+</div>
+</div>
+<section id="get-30-days-ago-date-in-the-proper-format" class="cell markdown">
+<h1>Get 30 Days Ago Date in the Proper Format</h1>
+<p>For the loop below to work (on the free tier) we need to only check back 30 days. We will use the datetime package to get todays date and 30 days prior.</p>
+</section>
+<div class="cell code" data-execution_count="252">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get 30 Days Ago</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> date, timedelta</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Todays Date: &#39;</span>, date.today().isoformat())</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;30 Days Ago: &#39;</span>, (date.today()<span class="op">-</span>timedelta(days<span class="op">=</span><span class="dv">30</span>)).isoformat())</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>startdate<span class="op">=</span>(date.today()<span class="op">-</span>timedelta(days<span class="op">=</span><span class="dv">30</span>)).isoformat()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Todays Date:  2023-09-12
+30 Days Ago:  2023-08-13
+</code></pre>
+</div>
+</div>
+<section id="loop-through-all-articles" class="cell markdown">
+<h1>Loop through all articles</h1>
+<p>There are two layers to this loop, the outer layer loops through the number of business sources (4), while the inner loop gets all the articles from that business source and collects the data.</p>
+</section>
+<div class="cell code" data-execution_count="253">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Init Variables</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Source<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;source&#39;</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>author<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;author&#39;</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>title<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;title&#39;</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>description<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;description&#39;</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>url<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;url&#39;</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>publishedAt<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;publishedAt&#39;</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>content<span class="op">=</span>pd.Series(name<span class="op">=</span><span class="st">&#39;content&#39;</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Use Counter</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>counter<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each source </span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> source <span class="kw">in</span> business_sources[<span class="st">&#39;id&#39;</span>]:</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    news_articles <span class="op">=</span> newsapi.get_everything(q<span class="op">=</span><span class="st">&#39;apple&#39;</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>                                          sources<span class="op">=</span>source,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                                          from_param<span class="op">=</span>startdate,</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>                                          )</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Gather data from each article</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, article <span class="kw">in</span> <span class="bu">enumerate</span>(news_articles[<span class="st">&#39;articles&#39;</span>]):</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        Source[counter] <span class="op">=</span> article[<span class="st">&#39;source&#39;</span>][<span class="st">&#39;id&#39;</span>]</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        author[counter] <span class="op">=</span> article[<span class="st">&#39;author&#39;</span>]</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        title[counter] <span class="op">=</span> article[<span class="st">&#39;title&#39;</span>]</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        description[counter] <span class="op">=</span> article[<span class="st">&#39;description&#39;</span>]</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        url[counter] <span class="op">=</span> article[<span class="st">&#39;url&#39;</span>]</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        publishedAt[counter] <span class="op">=</span> article[<span class="st">&#39;publishedAt&#39;</span>]</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        content[counter] <span class="op">=</span> article[<span class="st">&#39;content&#39;</span>]</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">#author=pd.concat([Source,article[&#39;author&#39;]],axis=1)</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        <span class="co">#for details in article:</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">#    print(details[&#39;title&#39;])</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine </span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>all_articles <span class="op">=</span> pd.concat([Source, author, title, description, url, publishedAt, content],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>all_articles.head()</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">&#39;display.max_columns&#39;</span>,<span class="va">None</span>)</span></code></pre></div>
+</div>
+<section id="sentiment-analysis" class="cell markdown">
+<h1>Sentiment Analysis</h1>
+<p>The time has finally come for the namesake of this workbook... Sentiment Analysis.</p>
+<p>Textblob is a simple python library for sentiment analysis that provides both an integer for sentiment and one for subjectivity based on a lexicon of coded words. I think subjectivity would be a useful variable for this analysis, but TextBlob does not enable the use of phrases.</p>
+<p>We will also use Vader, another python library for sentiment analysis trained on social media that provides a score for positive, negative, neutral, and a composite.</p>
+</section>
+<div class="cell code" data-execution_count="254">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textblob <span class="im">import</span> TextBlob</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> all_articles[<span class="st">&#39;title&#39;</span>][<span class="dv">8</span>]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>blob <span class="op">=</span> TextBlob(text)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>sentiment <span class="op">=</span> blob.sentiment</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sentiment)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Sentiment(polarity=0.0, subjectivity=0.0)
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="255">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>TitlePolarity <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;TitlePolarity&#39;</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>TitleSubjectivity <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;TitleSubjectivity&#39;</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>TitleNegative <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;TitleNegative&#39;</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>TitleNeutral <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;TitleNeutral&#39;</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>TitlePositive <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;TitlePositive&#39;</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>TitleComposite <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;TitleComposite&#39;</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textblob <span class="im">import</span> TextBlob</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vaderSentiment.vaderSentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>analyzer <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> title <span class="kw">in</span> all_articles[<span class="st">&#39;title&#39;</span>]:</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(id,title)</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    blob <span class="op">=</span> TextBlob(title)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    sentiment <span class="op">=</span> blob.sentiment</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    TitlePolarity[<span class="bu">id</span>] <span class="op">=</span> sentiment.polarity</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    TitleSubjectivity[<span class="bu">id</span>] <span class="op">=</span> sentiment.subjectivity</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    vs <span class="op">=</span> analyzer.polarity_scores(title)</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    TitleNegative[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;neg&#39;</span>]</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    TitleNeutral[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;neu&#39;</span>]</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    TitlePositive[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;pos&#39;</span>]</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    TitleComposite[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;compound&#39;</span>]</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span><span class="op">=</span><span class="bu">id</span><span class="op">+</span><span class="dv">1</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>all_articles <span class="op">=</span> pd.concat([all_articles, TitlePolarity, TitleSubjectivity, TitleNegative, TitleNeutral, TitlePositive, TitleComposite],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>all_articles.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="255">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>source</th>
+      <th>author</th>
+      <th>title</th>
+      <th>description</th>
+      <th>url</th>
+      <th>publishedAt</th>
+      <th>content</th>
+      <th>TitlePolarity</th>
+      <th>TitleSubjectivity</th>
+      <th>TitleNegative</th>
+      <th>TitleNeutral</th>
+      <th>TitlePositive</th>
+      <th>TitleComposite</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>business-insider</td>
+      <td>Lakshmi Varanasi</td>
+      <td>Apple is reportedly working on the Watch's big...</td>
+      <td>Apple is planning to release a new model of th...</td>
+      <td>https://www.businessinsider.com/apple-working-...</td>
+      <td>2023-08-14T16:03:56Z</td>
+      <td>Apple has a major redesign of the Apple Watch ...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>business-insider</td>
+      <td>htan@insider.com (Huileng Tan)</td>
+      <td>The billionaire founder of a key Apple supplie...</td>
+      <td>He said no foreign investor would dare invest ...</td>
+      <td>https://www.businessinsider.com/foxconn-terry-...</td>
+      <td>2023-08-28T10:21:20Z</td>
+      <td>Terry Gou, the billionaire founder of Foxconn ...</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000</td>
+      <td>0.870</td>
+      <td>0.130</td>
+      <td>0.4374</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>business-insider</td>
+      <td>Theron Mohamed</td>
+      <td>4 Big Tech giants have plowed over $1 trillion...</td>
+      <td>Apple poured over $600 billion into buybacks i...</td>
+      <td>https://markets.businessinsider.com/news/stock...</td>
+      <td>2023-08-30T10:39:42Z</td>
+      <td>Apple CEO Tim Cook.Richard Drew/AP Images\r\n&lt;...</td>
+      <td>0.166667</td>
+      <td>0.408333</td>
+      <td>0.000</td>
+      <td>0.906</td>
+      <td>0.094</td>
+      <td>0.3400</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>business-insider</td>
+      <td>Pete Syme</td>
+      <td>Apple, Amazon, and Meta among 6 tech giants de...</td>
+      <td>The European Union named Alphabet, Amazon, App...</td>
+      <td>https://www.businessinsider.com/tiktok-and-met...</td>
+      <td>2023-09-06T11:55:50Z</td>
+      <td>Google, Apple, Facebook, Amazon, and Microsoft...</td>
+      <td>0.136364</td>
+      <td>0.454545</td>
+      <td>0.000</td>
+      <td>0.918</td>
+      <td>0.082</td>
+      <td>0.1779</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>business-insider</td>
+      <td>Huileng Tan</td>
+      <td>Fears about China's government ban on iPhones ...</td>
+      <td>Apple shares have shed about $200 million in m...</td>
+      <td>https://www.businessinsider.com/iphone-china-g...</td>
+      <td>2023-09-11T04:41:41Z</td>
+      <td>An Apple Store in Shanghai, China.CFOTO/Future...</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.225</td>
+      <td>0.775</td>
+      <td>0.000</td>
+      <td>-0.7506</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="256">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>descriptionPolarity <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;descriptionPolarity&#39;</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>descriptionSubjectivity <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;descriptionSubjectivity&#39;</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>descriptionNegative <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;descriptionNegative&#39;</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>descriptionNeutral <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;descriptionNeutral&#39;</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>descriptionPositive <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;descriptionPositive&#39;</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>descriptionComposite <span class="op">=</span> pd.Series(name<span class="op">=</span><span class="st">&#39;descriptionComposite&#39;</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> textblob <span class="im">import</span> TextBlob</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> vaderSentiment.vaderSentiment <span class="im">import</span> SentimentIntensityAnalyzer</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>analyzer <span class="op">=</span> SentimentIntensityAnalyzer()</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">id</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> description <span class="kw">in</span> all_articles[<span class="st">&#39;description&#39;</span>]:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(id,description)</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    blob <span class="op">=</span> TextBlob(description)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    sentiment <span class="op">=</span> blob.sentiment</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    descriptionPolarity[<span class="bu">id</span>] <span class="op">=</span> sentiment.polarity</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    descriptionSubjectivity[<span class="bu">id</span>] <span class="op">=</span> sentiment.subjectivity</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    vs <span class="op">=</span> analyzer.polarity_scores(description)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    descriptionNegative[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;neg&#39;</span>]</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    descriptionNeutral[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;neu&#39;</span>]</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    descriptionPositive[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;pos&#39;</span>]</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    descriptionComposite[<span class="bu">id</span>] <span class="op">=</span> vs[<span class="st">&#39;compound&#39;</span>]</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">id</span><span class="op">=</span><span class="bu">id</span><span class="op">+</span><span class="dv">1</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>all_articles <span class="op">=</span> pd.concat([all_articles, descriptionPolarity, descriptionSubjectivity, descriptionNegative, descriptionNeutral, descriptionPositive, descriptionComposite],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>all_articles.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="256">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>source</th>
+      <th>author</th>
+      <th>title</th>
+      <th>description</th>
+      <th>url</th>
+      <th>publishedAt</th>
+      <th>content</th>
+      <th>TitlePolarity</th>
+      <th>TitleSubjectivity</th>
+      <th>TitleNegative</th>
+      <th>TitleNeutral</th>
+      <th>TitlePositive</th>
+      <th>TitleComposite</th>
+      <th>descriptionPolarity</th>
+      <th>descriptionSubjectivity</th>
+      <th>descriptionNegative</th>
+      <th>descriptionNeutral</th>
+      <th>descriptionPositive</th>
+      <th>descriptionComposite</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>business-insider</td>
+      <td>Lakshmi Varanasi</td>
+      <td>Apple is reportedly working on the Watch's big...</td>
+      <td>Apple is planning to release a new model of th...</td>
+      <td>https://www.businessinsider.com/apple-working-...</td>
+      <td>2023-08-14T16:03:56Z</td>
+      <td>Apple has a major redesign of the Apple Watch ...</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.0000</td>
+      <td>0.136364</td>
+      <td>0.454545</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>business-insider</td>
+      <td>htan@insider.com (Huileng Tan)</td>
+      <td>The billionaire founder of a key Apple supplie...</td>
+      <td>He said no foreign investor would dare invest ...</td>
+      <td>https://www.businessinsider.com/foxconn-terry-...</td>
+      <td>2023-08-28T10:21:20Z</td>
+      <td>Terry Gou, the billionaire founder of Foxconn ...</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.000</td>
+      <td>0.870</td>
+      <td>0.130</td>
+      <td>0.4374</td>
+      <td>0.031250</td>
+      <td>0.562500</td>
+      <td>0.123</td>
+      <td>0.782</td>
+      <td>0.095</td>
+      <td>-0.1280</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>business-insider</td>
+      <td>Theron Mohamed</td>
+      <td>4 Big Tech giants have plowed over $1 trillion...</td>
+      <td>Apple poured over $600 billion into buybacks i...</td>
+      <td>https://markets.businessinsider.com/news/stock...</td>
+      <td>2023-08-30T10:39:42Z</td>
+      <td>Apple CEO Tim Cook.Richard Drew/AP Images\r\n&lt;...</td>
+      <td>0.166667</td>
+      <td>0.408333</td>
+      <td>0.000</td>
+      <td>0.906</td>
+      <td>0.094</td>
+      <td>0.3400</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>business-insider</td>
+      <td>Pete Syme</td>
+      <td>Apple, Amazon, and Meta among 6 tech giants de...</td>
+      <td>The European Union named Alphabet, Amazon, App...</td>
+      <td>https://www.businessinsider.com/tiktok-and-met...</td>
+      <td>2023-09-06T11:55:50Z</td>
+      <td>Google, Apple, Facebook, Amazon, and Microsoft...</td>
+      <td>0.136364</td>
+      <td>0.454545</td>
+      <td>0.000</td>
+      <td>0.918</td>
+      <td>0.082</td>
+      <td>0.1779</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.105</td>
+      <td>0.818</td>
+      <td>0.077</td>
+      <td>-0.1531</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>business-insider</td>
+      <td>Huileng Tan</td>
+      <td>Fears about China's government ban on iPhones ...</td>
+      <td>Apple shares have shed about $200 million in m...</td>
+      <td>https://www.businessinsider.com/iphone-china-g...</td>
+      <td>2023-09-11T04:41:41Z</td>
+      <td>An Apple Store in Shanghai, China.CFOTO/Future...</td>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.225</td>
+      <td>0.775</td>
+      <td>0.000</td>
+      <td>-0.7506</td>
+      <td>0.000000</td>
+      <td>0.066667</td>
+      <td>0.260</td>
+      <td>0.650</td>
+      <td>0.089</td>
+      <td>-0.6369</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<section id="convert-date-variable" class="cell markdown">
+<h1>Convert Date Variable</h1>
+<p>The format for the publishedAt variable is down to the nanosecond, we just need the date since we're predicting daily data.</p>
+</section>
+<div class="cell code" data-execution_count="257">
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>all_articles[<span class="st">&#39;Date&#39;</span>]<span class="op">=</span> pd.to_datetime(all_articles[<span class="st">&#39;publishedAt&#39;</span>]).dt.floor(<span class="st">&#39;H&#39;</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>all_articles[<span class="st">&#39;Date&#39;</span>]</span></code></pre></div>
+<div class="output execute_result" data-execution_count="257">
+<pre><code>0     2023-08-14 16:00:00+00:00
+1     2023-08-28 10:00:00+00:00
+2     2023-08-30 10:00:00+00:00
+3     2023-09-06 11:00:00+00:00
+4     2023-09-11 04:00:00+00:00
+                 ...           
+144   2023-08-23 15:00:00+00:00
+145   2023-08-30 11:00:00+00:00
+146   2023-08-31 09:00:00+00:00
+147   2023-09-08 11:00:00+00:00
+148   2023-09-06 10:00:00+00:00
+Name: Date, Length: 149, dtype: datetime64[ns, UTC]</code></pre>
+</div>
+</div>
+<section id="download-stock-data" class="cell markdown">
+<h1>Download Stock Data</h1>
+</section>
+<div class="cell code" data-execution_count="258">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>sdf<span class="op">=</span>yf.download(<span class="st">&#39;aapl&#39;</span>,start<span class="op">=</span>startdate, interval<span class="op">=</span><span class="st">&quot;1h&quot;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>sdf<span class="op">=</span>sdf.reset_index()</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>sdf <span class="op">=</span> sdf.rename(columns<span class="op">=</span>{<span class="st">&#39;Datetime&#39;</span>:<span class="st">&#39;Date&#39;</span>})</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>sdf[<span class="st">&#39;Date&#39;</span>] <span class="op">=</span> sdf[<span class="st">&#39;Date&#39;</span>].dt.floor(<span class="st">&#39;H&#39;</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Subset just Date &amp; Close</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>sdf<span class="op">=</span>sdf[[<span class="st">&#39;Date&#39;</span>,<span class="st">&#39;Close&#39;</span>]]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>sdf[<span class="st">&#39;Return&#39;</span>] <span class="op">=</span> np.where(sdf[<span class="st">&#39;Close&#39;</span>] <span class="op">&gt;</span> sdf[<span class="st">&#39;Close&#39;</span>].shift(<span class="dv">1</span>),<span class="dv">1</span>,<span class="dv">0</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>sdf.head()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[*********************100%***********************]  1 of 1 completed
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="258">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Close</th>
+      <th>Return</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2023-08-14 09:00:00-04:00</td>
+      <td>178.270004</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2023-08-14 10:00:00-04:00</td>
+      <td>179.350006</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2023-08-14 11:00:00-04:00</td>
+      <td>178.714493</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2023-08-14 12:00:00-04:00</td>
+      <td>179.227905</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2023-08-14 13:00:00-04:00</td>
+      <td>179.089996</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="259">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Merge</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>combineddf<span class="op">=</span> pd.merge(sdf,all_articles,how<span class="op">=</span><span class="st">&#39;left&#39;</span>).ffill(limit<span class="op">=</span><span class="dv">24</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>combineddf[<span class="st">&#39;SMA12&#39;</span>]<span class="op">=</span> combineddf[<span class="st">&#39;Close&#39;</span>].rolling(<span class="dv">12</span>).mean()</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>combineddf[<span class="st">&#39;SMA24&#39;</span>]<span class="op">=</span> combineddf[<span class="st">&#39;Close&#39;</span>].rolling(<span class="dv">24</span>).mean()</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>combineddf[<span class="st">&#39;SMA48&#39;</span>]<span class="op">=</span> combineddf[<span class="st">&#39;Close&#39;</span>].rolling(<span class="dv">48</span>).mean()</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop all unnecessary data</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>combineddf <span class="op">=</span> combineddf.drop(columns<span class="op">=</span>[<span class="st">&#39;author&#39;</span>,<span class="st">&#39;title&#39;</span>,<span class="st">&#39;description&#39;</span>,<span class="st">&#39;source&#39;</span>,<span class="st">&#39;url&#39;</span>,<span class="st">&#39;publishedAt&#39;</span>,<span class="st">&#39;content&#39;</span>])</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>combineddf.tail(<span class="dv">10</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="259">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Close</th>
+      <th>Return</th>
+      <th>TitlePolarity</th>
+      <th>TitleSubjectivity</th>
+      <th>TitleNegative</th>
+      <th>TitleNeutral</th>
+      <th>TitlePositive</th>
+      <th>TitleComposite</th>
+      <th>descriptionPolarity</th>
+      <th>descriptionSubjectivity</th>
+      <th>descriptionNegative</th>
+      <th>descriptionNeutral</th>
+      <th>descriptionPositive</th>
+      <th>descriptionComposite</th>
+      <th>SMA12</th>
+      <th>SMA24</th>
+      <th>SMA48</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>148</th>
+      <td>2023-09-11 13:00:00-04:00</td>
+      <td>179.514999</td>
+      <td>1</td>
+      <td>0.291667</td>
+      <td>0.791667</td>
+      <td>0.0</td>
+      <td>1.000</td>
+      <td>0.000</td>
+      <td>0.0000</td>
+      <td>1.0</td>
+      <td>0.3</td>
+      <td>0.00</td>
+      <td>0.856</td>
+      <td>0.144</td>
+      <td>0.6369</td>
+      <td>178.966417</td>
+      <td>179.147299</td>
+      <td>183.884189</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>2023-09-11 14:00:00-04:00</td>
+      <td>179.695007</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.980584</td>
+      <td>179.000825</td>
+      <td>183.711585</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>2023-09-11 15:00:00-04:00</td>
+      <td>179.380005</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.944602</td>
+      <td>178.853516</td>
+      <td>183.529085</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>2023-09-12 09:00:00-04:00</td>
+      <td>177.550003</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.777519</td>
+      <td>178.641671</td>
+      <td>183.298981</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>2023-09-12 10:00:00-04:00</td>
+      <td>176.699997</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.537102</td>
+      <td>178.440837</td>
+      <td>183.044604</td>
+    </tr>
+    <tr>
+      <th>153</th>
+      <td>2023-09-12 11:00:00-04:00</td>
+      <td>176.604996</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.347501</td>
+      <td>178.178962</td>
+      <td>182.809917</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>2023-09-12 12:00:00-04:00</td>
+      <td>177.569901</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.316242</td>
+      <td>178.241875</td>
+      <td>182.565956</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>2023-09-12 13:00:00-04:00</td>
+      <td>176.100006</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>178.142076</td>
+      <td>178.190975</td>
+      <td>182.304290</td>
+    </tr>
+    <tr>
+      <th>156</th>
+      <td>2023-09-12 14:00:00-04:00</td>
+      <td>175.720001</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>177.961243</td>
+      <td>178.126809</td>
+      <td>182.025227</td>
+    </tr>
+    <tr>
+      <th>157</th>
+      <td>2023-09-12 15:00:00-04:00</td>
+      <td>176.300003</td>
+      <td>1</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.0</td>
+      <td>0.909</td>
+      <td>0.091</td>
+      <td>0.2023</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.12</td>
+      <td>0.880</td>
+      <td>0.000</td>
+      <td>-0.5267</td>
+      <td>177.757076</td>
+      <td>178.115080</td>
+      <td>181.758248</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="260">
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize the Closing price</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">6</span>))<span class="co"># specifies size</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Close Price History&#39;</span>,fontsize<span class="op">=</span><span class="dv">24</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>plt.plot(combineddf[[<span class="st">&#39;Close&#39;</span>,<span class="st">&#39;SMA12&#39;</span>,<span class="st">&#39;SMA24&#39;</span>]])</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Date&#39;</span>,fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Close Price USD   $&#39;</span>,fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>plt.legend([<span class="st">&#39;Close&#39;</span>,<span class="st">&#39;SMA12&#39;</span>,<span class="st">&#39;SMA24&#39;</span>])</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img src="a64ebff4ff3fa9bd3b5b587609e82e78afd4be52.png" /></p>
+</div>
+</div>
+<div class="cell code" data-execution_count="261">
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># missing data</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>combineddf<span class="op">=</span> combineddf.dropna(axis<span class="op">=</span><span class="dv">0</span>)</span></code></pre></div>
+</div>
+<section id="split-data-into-training--testing" class="cell markdown">
+<h1>Split Data into training &amp; testing</h1>
+</section>
+<div class="cell code" data-execution_count="262">
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># How many days did the stock go up and down?</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>combineddf[<span class="st">&#39;Return&#39;</span>].value_counts()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="262">
+<pre><code>Return
+1    56
+0    55
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="263">
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> combineddf.drop(columns<span class="op">=</span>[<span class="st">&#39;Return&#39;</span>,<span class="st">&#39;Date&#39;</span>])</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>Y <span class="op">=</span> combineddf[[<span class="st">&#39;Return&#39;</span>]]</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>X_train, X_test, Y_train, Y_test <span class="op">=</span> train_test_split(X, Y, test_size <span class="op">=</span> <span class="fl">0.33</span>, random_state <span class="op">=</span> <span class="dv">0</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="264">
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>ss_train <span class="op">=</span> StandardScaler()</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> ss_train.fit_transform(X_train)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>ss_test <span class="op">=</span> StandardScaler()</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>X_test <span class="op">=</span> ss_test.fit_transform(X_test)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="265">
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">1000</span>, max_depth<span class="op">=</span><span class="dv">5</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="266">
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get predictions</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, Y_train.values.ravel())</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>preds <span class="op">=</span> model.predict(X_test)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="267">
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>accuracy_score(Y_test,preds)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="267">
+<pre><code>0.5405405405405406</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="268">
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="op">=</span> LogisticRegression()</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>model2.fit(X_train, Y_train.values.ravel())</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>preds2 <span class="op">=</span> model.predict(X_test)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>accuracy_score(Y_test,preds2)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="co">#preds2</span></span></code></pre></div>
+<div class="output execute_result" data-execution_count="268">
+<pre><code>0.5405405405405406</code></pre>
+</div>
+</div>
+<section id="lstm" class="cell markdown">
+<h1>LSTM</h1>
+</section>
+<div class="cell code" data-execution_count="270">
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.models <span class="im">import</span> Sequential</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> keras.layers <span class="im">import</span> Dense, LSTM</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>stock <span class="op">=</span> combineddf[[<span class="st">&#39;Close&#39;</span>]]</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> stock.values</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>training_data_len <span class="op">=</span> math.ceil(<span class="bu">len</span>(dataset)<span class="op">*</span><span class="fl">.8</span>)</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the data</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler(feature_range<span class="op">=</span>(<span class="dv">0</span>,<span class="dv">1</span>))</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>scaled_data <span class="op">=</span> scaler.fit_transform(dataset)</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the training dataset</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>train_data <span class="op">=</span> scaled_data[<span class="dv">0</span>:training_data_len,:]</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>x_train<span class="op">=</span>[]<span class="co"># dependent</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>y_train<span class="op">=</span>[]<span class="co"># outcome</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop systematically takes 60 days as x training and the output being the next day</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">60</span>,<span class="bu">len</span>(train_data)):</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>  x_train.append(train_data[i<span class="op">-</span><span class="dv">60</span>:i,<span class="dv">0</span>])</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>  y_train.append(train_data[i,<span class="dv">0</span>])</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i<span class="op">&lt;=</span><span class="dv">61</span>:</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;x_train :&#39;</span>,i,x_train)</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&#39;y_train&#39;</span>,y_train)</span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert x &amp; y training to numpy arrays</span></span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>x_train, y_train <span class="op">=</span> np.array(x_train), np.array(y_train)</span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>x_train<span class="op">=</span> np.reshape(x_train,(x_train.shape[<span class="dv">0</span>],x_train.shape[<span class="dv">1</span>],<span class="dv">1</span>))</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>x_train.shape</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>x_train : 60 [array([0.07748593, 0.09985865, 0.1055245 , 0.11260601, 0.10623233,
+       0.31055213, 0.31055213, 0.38456052, 0.3548156 , 0.39093528,
+       0.37818684, 0.41182751, 0.38385269, 0.18994281, 0.18994281,
+       0.17032575, 0.16571569, 0.14305984, 0.12776214, 0.07790414,
+       0.04320119, 0.09135933, 0.11614731, 0.14376767, 0.11897321,
+       0.19334254, 0.24114731, 0.20396642, 0.28824316, 0.21658627,
+       0.21388788, 0.29992933, 0.27049563, 0.29638803, 0.31798917,
+       0.47308746, 0.51770539, 0.55701191, 0.56798917, 0.60978011,
+       0.64412212, 0.59490062, 0.74114731, 0.77266342, 0.82931979,
+       0.81941239, 0.81941239, 0.78824424, 0.82613295, 0.84631736,
+       0.89305984, 0.90439155, 0.86827187, 0.86827187, 0.86827187,
+       0.87960357, 0.91182751, 0.93414296, 0.86048145, 0.9603401 ])]
+y_train [0.9164310847144055]
+
+x_train : 61 [array([0.07748593, 0.09985865, 0.1055245 , 0.11260601, 0.10623233,
+       0.31055213, 0.31055213, 0.38456052, 0.3548156 , 0.39093528,
+       0.37818684, 0.41182751, 0.38385269, 0.18994281, 0.18994281,
+       0.17032575, 0.16571569, 0.14305984, 0.12776214, 0.07790414,
+       0.04320119, 0.09135933, 0.11614731, 0.14376767, 0.11897321,
+       0.19334254, 0.24114731, 0.20396642, 0.28824316, 0.21658627,
+       0.21388788, 0.29992933, 0.27049563, 0.29638803, 0.31798917,
+       0.47308746, 0.51770539, 0.55701191, 0.56798917, 0.60978011,
+       0.64412212, 0.59490062, 0.74114731, 0.77266342, 0.82931979,
+       0.81941239, 0.81941239, 0.78824424, 0.82613295, 0.84631736,
+       0.89305984, 0.90439155, 0.86827187, 0.86827187, 0.86827187,
+       0.87960357, 0.91182751, 0.93414296, 0.86048145, 0.9603401 ]), array([0.09985865, 0.1055245 , 0.11260601, 0.10623233, 0.31055213,
+       0.31055213, 0.38456052, 0.3548156 , 0.39093528, 0.37818684,
+       0.41182751, 0.38385269, 0.18994281, 0.18994281, 0.17032575,
+       0.16571569, 0.14305984, 0.12776214, 0.07790414, 0.04320119,
+       0.09135933, 0.11614731, 0.14376767, 0.11897321, 0.19334254,
+       0.24114731, 0.20396642, 0.28824316, 0.21658627, 0.21388788,
+       0.29992933, 0.27049563, 0.29638803, 0.31798917, 0.47308746,
+       0.51770539, 0.55701191, 0.56798917, 0.60978011, 0.64412212,
+       0.59490062, 0.74114731, 0.77266342, 0.82931979, 0.81941239,
+       0.81941239, 0.78824424, 0.82613295, 0.84631736, 0.89305984,
+       0.90439155, 0.86827187, 0.86827187, 0.86827187, 0.87960357,
+       0.91182751, 0.93414296, 0.86048145, 0.9603401 , 0.91643108])]
+y_train [0.9164310847144055, 0.9486550215697971]
+
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="270">
+<pre><code>(29, 60, 1)</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="271">
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Build the lstm</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Sequential()</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>model.add(LSTM(<span class="dv">50</span>, return_sequences<span class="op">=</span><span class="va">True</span>, input_shape<span class="op">=</span> (x_train.shape[<span class="dv">1</span>], <span class="dv">1</span> ))) <span class="co"># 50 neurons</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>model.add(LSTM(<span class="dv">50</span>,return_sequences<span class="op">=</span><span class="va">False</span>)) <span class="co"># False because its the last lstm layer</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>model.add(Dense(<span class="dv">25</span>))<span class="co"># Neural network layer with 25 neurons</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>model.add(Dense(<span class="dv">1</span>))<span class="co"># neural network layer with 1 neuron</span></span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="272">
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compile the model</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">compile</span>(optimizer<span class="op">=</span><span class="st">&#39;adam&#39;</span>, loss<span class="op">=</span><span class="st">&#39;mean_squared_error&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="273">
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Train the model</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>model.fit(x_train, y_train, batch_size<span class="op">=</span><span class="dv">1</span>, epochs<span class="op">=</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>29/29 [==============================] - 7s 28ms/step - loss: 0.1370
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="273">
+<pre><code>&lt;keras.src.callbacks.History at 0x2c4ed3f9f50&gt;</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="274">
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the test dataset</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>test_data <span class="op">=</span> scaled_data[training_data_len<span class="op">-</span><span class="dv">60</span>:,:]</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>x_test <span class="op">=</span> []</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>y_test <span class="op">=</span> dataset[training_data_len:,:]</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">60</span>, <span class="bu">len</span>(test_data)):</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>  x_test.append(test_data[i<span class="op">-</span><span class="dv">60</span>:i,<span class="dv">0</span>])</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="275">
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>x_test <span class="op">=</span> np.array(x_test)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="276">
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>x_test <span class="op">=</span> np.reshape(x_test,(x_test.shape[<span class="dv">0</span>],x_test.shape[<span class="dv">1</span>],<span class="dv">1</span>))</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>x_test.shape</span></code></pre></div>
+<div class="output execute_result" data-execution_count="276">
+<pre><code>(22, 60, 1)</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="277">
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the model&#39;s predicted price values</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> model.predict(x_test)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Inverse transform the data back to the regular prices</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> scaler.inverse_transform(predictions)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>1/1 [==============================] - 2s 2s/step
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="278">
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize the data</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> stock[<span class="dv">0</span>:training_data_len]</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>valid <span class="op">=</span> stock[training_data_len:]</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>valid[<span class="st">&#39;Predictions&#39;</span>] <span class="op">=</span> predictions</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">16</span>,<span class="dv">8</span>))</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Model&#39;</span>,fontsize<span class="op">=</span><span class="dv">24</span>)</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Date&#39;</span>)</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Close Price USD ($)&#39;</span>)</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>plt.plot(train[<span class="st">&#39;Close&#39;</span>])</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>plt.plot(valid[[<span class="st">&#39;Close&#39;</span>,<span class="st">&#39;Predictions&#39;</span>]])</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>plt.legend([<span class="st">&#39;Train&#39;</span>,<span class="st">&#39;Validation&#39;</span>,<span class="st">&#39;Predicitons&#39;</span>],loc<span class="op">=</span><span class="st">&#39;lower right&#39;</span>)</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>C:\Users\ddg12\AppData\Local\Temp\ipykernel_26612\2700723874.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  valid[&#39;Predictions&#39;] = predictions
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img src="45fe5578b057accc737b5062f14351a7e84bbca3.png" /></p>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+</body>
+</html>
