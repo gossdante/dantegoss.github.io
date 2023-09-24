@@ -1,6 +1,6 @@
 # dantegoss.github.io
 Dante Goss's Personal Webpage
-[dantegoss.com](dantegoss.com)
+[dantegoss.com](https://dantegoss.com)
 
 
 
