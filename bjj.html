@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dante Goss's Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+		
+		<!-- Header -->
+        <header id="header">
+				
+				
+
+            <div class="inner">
+                <br>
+                <a href="images/2021 Oct Headshot 3 - Copy.jpg" class="image avatar" width="200"><img src="images/2021 Oct Headshot 3 - Copy.jpg" alt="Avatar" style="border: 3px solid white;" /></a>
+                <h1><strong>Dante Goss</strong> </h1>
+                <h4>Kinesiology PhD Student <br> University of Virginia</h4>					
+            </div>
+        </header>
+		
+
+		<!-- Main -->
+			<div id="main">
+				<nav class="menu" id="nav" display: inline;>
+					<style>
+						.nav {
+							background-color: white;
+							list-style-type: none;
+							text-align: center; 
+							padding: 0;
+							margin: 0;
+						}
+
+						.nav li {
+							display: inline-block;
+							font-size: 30px;
+							padding: 5px;
+						}
+					</style>
+					<ul class = "nav">					
+						
+						<li><a href="index.html">Home </a></li>						
+						<li><a href="Resume.html"> Resume</a></li>
+						<li><a href="Presentations.html">Presentations</a></li>
+						<li><a href="Projects.html">Projects</a></li>
+						
+					</ul>
+				</nav>
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Brazilian Jiu Jitsu Analysis</h2>
+                            <ul class="actions">
+                                <li><a href="https://github.com/gossdante/bjj_network" class="button">View Repository</a></li>
+                            </ul>
+                            <h4>In this project I attempted to visualize the relationships between brazilian jiu jitsu athletes using a network analysis. I also performed a statistical analysis on whether having a favorite submission is beneficial.</h4>
+                            <hr>
+						</header>
+                        <p>BJJ Athletes tend to compete against each other quite a bit. Would network analysis be a useful tool for "ranking" or comparing athletes in similar weight classes against each other? My hypothesis going into this would be that some key clusters would appear, likely by weight class and sex, with a visual difference between someone who has competed against everyone in a a cluster compared to someone who has beaten everyone in a cluster. For this project I used beautiful soup to scrape athlete names, links, birthdays, record, and match history from flo grappling. I created a database to store this information with two tables, one for the name, link, birthday, and record, and another for all the matches I was able to scrape. I was able to create several functions to execute these steps and eventually I was able to create and clean dataset of over 38,000 matches and 1400 athletes and save to a local database. This was all done in bjj.ipynb.</p>
+												
+                        <p>I then made a new notebook where I loaded in this sql data and cleaned it, parsing out pieces of text that I needed to standardize the id's as well as create a total match column. I first experimented with making a network on some fabricated data, but then I got to work using my data. As can be expected, based on the sheer volume of my data it was difficult to interpret a network in 2D space. From here I did a few things, I made a subset of data for athletes that had at least 20 matches, as well as only included matches from the last 5 years. I used the NetworkX package to create my network and eventually wanted to use the Pyvis package, which I was able to do as is seen in the html files attached. These are very large but will run if given time. Next, I've made functions to analyze a given athletes first and second degree connections, this has resulted in a much more manageable graphic.</p>
+                        <ul class="actions">
+                            <li><a href="Nicky_Ryan_1stDegree.html" class="button">First Degree Example</a></li>
+                        </ul>
+                        <ul class="actions">
+                            <li><a href="Nicky_Ryan_2ndDegree.html" class="button">Second Degree Example</a></li>
+                        </ul>
+                        <p>I also performed a more traditional analysis of "Favorite Submission" in general, but also on win percentage. The most common submissions are Choke From the Back, Armbar, and Rear Naked Choke (I allowed Choke From the Back to be its own entity). Though it should be noted that the majority of matches do not end in submission, and the most common method of winning a match is by Deicsion or Points, to me this stresses the importance of takedowns and cardio.</p>
+                        <a  class="image fit thumb"><img src="images/Most Common Submissions.png" /></a>	
+                        <p>Looking closer, I analyzed the matches for all the athletes in my sample over the last 5 years, coming up with a favorite submission and a recent win percentage. I added this information to the database as well then began to do exploratory data analysis and statistical tests. Win Percentage was not normally distributed, so I used the kruskal wallis test to first to compare medians, then used conover's test for paired posthoc analysis.</p>
+                        <article class="col-6 col-12-xsmall work-item">
+                        <a  class="image fit thumb"><img src="images/Win Percentage by Favorite Submission.png" /></a>	
+                        <a  class="image fit thumb"><img src="images/Favorite Submission Heatmap.png" /></a>
+                        </article>	
+                        <ul class="actions">
+                            <li><a href="Regression_Table.html" class="button">View Regression Table</a></li>
+                        </ul>
+                        <p>Overall this analysis has showed that having some favorite submissions are statistically better than not having a favorite submission, though this should be interpreted carefully. This sample is heavily imbalanced, for instance there is only one individual athlete who's favorite submission is the Anaconda Choke, but they have a win percentage near 80%, so the coefficient in our regression is very high.<br>In terms of recommendations, from this analysis getting to the back is likely a good strategy as both Choke From the Back and Rear Naked Choke are statistically significant with a 20% difference in win percentage from No Favorite. Removing the submissions with only one athlete, I would also recommend the Armbar, Americana, and Straight Ankle Lock.<br>For me, time to drill armbars.</p>
+					</section>
+
+                </div>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <div class="fields">
+                            <label for="nxq9uz@virginia.edu">Email: nxq9uz@virginia.edu</label>
+                        </div>
+                        <div class="inner">
+                            <ul class="icons">
+                                <li><a href="https://twitter.com/DanteDGoss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="https://github.com/gossdante" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/gossdante/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                            </ul>
+                            <h1>
+                                <p>
+        
+                                    <p><br></p>
+        
+                                </p>
+                            </h1>
+        
+                        </div>
+                    </footer>
+        
+                <!-- Scripts -->
+                    <script src="assets/js/jquery.min.js"></script>
+                    <script src="assets/js/jquery.poptrox.min.js"></script>
+                    <script src="assets/js/browser.min.js"></script>
+                    <script src="assets/js/breakpoints.min.js"></script>
+                    <script src="assets/js/util.js"></script>
+                    <script src="assets/js/main.js"></script>
+        
+            </body>
+        </html>
+        

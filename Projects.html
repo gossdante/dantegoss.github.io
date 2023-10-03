@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dante Goss's Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+		
+		<!-- Header -->
+			<header id="header">
+				
+				
+
+				<div class="inner">
+					<br>
+					<a href="images/2021 Oct Headshot 3 - Copy.jpg" class="image avatar" width="200"><img src="images/2021 Oct Headshot 3 - Copy.jpg" alt="Avatar" style="border: 3px solid white;" /></a>
+					<h1><strong>Dante Goss</strong> </h1>
+					<h4>Kinesiology PhD Student <br> University of Virginia</h4>					
+				</div>
+			</header>
+		
+
+		<!-- Main -->
+			<div id="main">
+				<nav class="menu" id="nav" display: inline;>
+					<style>
+						.nav {
+							background-color: white;
+							list-style-type: none;
+							text-align: center; 
+							padding: 0;
+							margin: 0;
+						}
+
+						.nav li {
+							display: inline-block;
+							font-size: 30px;
+							padding: 5px;
+						}
+					</style>
+					<ul class = "nav">					
+						
+						<li><a href="index.html">Home </a></li>						
+						<li><a href="Resume.html"> Resume</a></li>
+						<li><a href="Presentations.html">Presentations</a></li>
+						<li><a href="Projects.html">Projects</a></li>
+						
+					</ul>
+				</nav>
+
+				<!-- One -->
+					<!--
+					<section id="one">
+						<header class="major">
+							<h2>My Resume</h2>
+						</header>
+						<a href="images/Dante_Goss_Resume.jpg" class="image fit thumb"><img src="images/Goss_2023_Resume1.jpg"alt="" /></a>
+						<p>This is my current resume detailing my education, work experience, skills, and relevant coursework.</p>
+						<ul class="actions">
+							<li><a href="Dante_Goss_Resume.pdf" class="button">Download Resume</a></li>
+
+						</ul>
+					</section>
+					-->
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Projects</h2>
+                        <hr>
+						<div class="row">	
+                            <article class="col-6 col-12-xsmall work-item">
+								<a  class="image fit thumb"><img src="images/armbar.jpg" /></a>						
+								<ul class="actions">
+									<h3><a href="bjj.html" class="button">Brazilian Jiu Jitsu Analysis</a></h3>
+								</ul>
+							</article>											
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/healthstatusgait.png" class="image fit thumb"><img src="images/healthstatusgait.png" alt="" /></a>
+								<h3>Identification of Health Status via Gait Analysis</h3>
+								<p>This project used ground reaction force data collected during walking for individuals with parkinsons disease and healthy controls. <br> I used R to load in data & isolate key points of the gait cycle to determine cadence for each foot through the entire trail. <br> I used feature engineering to measure & categorize all participants based on speed, variability, and asymmetry (difference between limbs). I visualized these differences, ran a principal component analysis and correlation analysis for feature reduction. <br> Finally, I created several logistic regression models to classify a test set as healthy or parkinsonian. I created several models beginning with speed as a single variable but settling on a stepwise logistic regression with moderate predictive power after doing diagnostics.</p>
+								<p><br></p>
+								<ul class="actions">
+									<li><a href="FinalProject.html" class="button">View Code</a></li>
+								</ul>
+							</article> 
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/newspaper_.jpg" class="image fit thumb"><img src="images/newspaper_stock.jpg" alt="" /></a>
+								<h3>News Sentiment Analysis & Stock Prediction</h3>
+								<p>This project used NewsAPI, several NLP models, yFinance, and logistic regression to predict stock prices. <br> This project used the free tier of NewsAPI, which allows for capture of the most recent 30 days of newspaper data for 128 sources. <br> In this project I selected all business sources and chose all articles that mentioned Apple. <br> I used TextBlob and Vader to perform sentiment analysis on both the titles and descriptions of each article. <br> Using the yFinance package I imported hourly stock data for Apple to match the time period recorded for the newspaper articles. I combined both data sources, split into training and testing and uses the Scikit-Learn package to preprocess my data and run an logistic regression & random forest classifier on the data with the outcome of whether the stock went up or down. <br> As an extra note I used Scikit-Learn to predict the stock price using a Long Short Term Memory (LSTM) model.  </p>
+								<p><br></p>
+								<ul class="actions">
+									<li><a href="sentiment.html" class="button">View Code</a></li>
+								</ul>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/analog_sound.jpg" class="image fit thumb"><img src="images/analog_sound.jpg" alt="" /></a>
+								<h3>Spotify add on for BPM selection</h3>
+								<p>This project uses python to access saved songs, filter based on a target bpm and tolerance, and create a playlist in the user account. <br> This came from an idea of how music of different genres impacts adherence & learning with gait retraining in runners. </p>
+								<p><br></p>
+								<ul class="actions">
+									<li><a href="https://github.com/gossdante/spotify_repo">View Repository</a></li>
+								</ul>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/rpsych_img.png" class="image fit thumb"><img src="images/rpsych_img.png" alt="" /></a>
+								<h3>Loadsol/Cadence Pilot </h3>
+								<p>This project looks at pilot grf data from a shoe based loadcell & compares my personal gait at different step rates. <br> This involved me processing, exploring, and visualizing my data, and led me to the conclusion that cadence had a significant effect on my personal ground reaction forces, but also that I had residual limb imbalance from a previous injury. </br></p>
+								<p><br></p>
+								<ul class="actions">
+									<li><a href="DGoss-Final-Project.html" class="button">View Code</a></li>
+								</ul>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/ryzen.jpg" class="image fit thumb"><img src="images/ryzen.jpg" alt="" /></a>
+								<h3>Online Computer Part Prices with Web Scraping</h3>
+								<p>This project used the beautiful soup package in python to scrape price data from a list of predefined computer parts. </p>
+								<p><br></p>
+								<ul class="actions">
+									<li><a href="ebay_scraper_c.html" class="button">View Code</a></li>
+								</ul>
+							</article>
+							
+						</div>
+					</section>
+                </div>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <div class="fields">
+                            <label for="nxq9uz@virginia.edu">Email: nxq9uz@virginia.edu</label>
+                        </div>
+                        <div class="inner">
+                            <ul class="icons">
+                                <li><a href="https://twitter.com/DanteDGoss" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="https://github.com/gossdante" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                                <li><a href="https://www.linkedin.com/in/gossdante/" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
+                            </ul>
+                            <h1>
+                                <p>
+        
+                                    <p><br></p>
+        
+                                </p>
+                            </h1>
+        
+                        </div>
+                    </footer>
+        
+                <!-- Scripts -->
+                    <script src="assets/js/jquery.min.js"></script>
+                    <script src="assets/js/jquery.poptrox.min.js"></script>
+                    <script src="assets/js/browser.min.js"></script>
+                    <script src="assets/js/breakpoints.min.js"></script>
+                    <script src="assets/js/util.js"></script>
+                    <script src="assets/js/main.js"></script>
+        
+            </body>
+        </html>
