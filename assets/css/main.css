@@ -2167,6 +2167,9 @@ input, select, textarea {
 		ul li {
 			padding-left: 0.5em;
 		}
+		ul li a {
+			color:#0000CD
+		}
 
 		ul.alt {
 			list-style: none;
