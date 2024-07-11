@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Timer, Counter, Calculator App</title>
+  <style>
+    #customPrompt {
+      display: none;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Timer, Keystroke Counter, and Calculator</h1>
+  
+  <div>
+    <h2>Setup Timer</h2>
+    <label for="timerDuration">Duration (minutes):</label>
+    <input type="number" id="timerDuration" value="5"><br>
+    <label for="reminder1Time">First Reminder (minutes left):</label>
+    <input type="number" id="reminder1Time" value="2"><br>
+    <label for="reminder1Text">First Reminder Text:</label>
+    <input type="text" id="reminder1Text" value="Met Cart"><br>
+    <label for="reminder2Time">Second Reminder (minutes left):</label>
+    <input type="number" id="reminder2Time" value="1"><br>
+    <label for="reminder2Text">Second Reminder Text:</label>
+    <input type="text" id="reminder2Text" value="Step Rate"><br>
+    <label for="reminder3Time">Third Reminder (minutes left):</label>
+    <input type="number" id="reminder3Time" value="0.5"><br>
+    <label for="reminder3Text">Third Reminder Text:</label>
+    <input type="text" id="reminder3Text" value="MotionMonitor"><br>
+    <button id="startMainTimer">Start Timer</button>
+  </div>
+  
+  <div id="timeDisplay">Time left: 5:00</div>
+  <div id="reminderDisplay"></div>
+
+  <h2>Keystroke Counter</h2>
+  <button id="btn60">60 seconds</button>
+  <button id="btn30">30 seconds</button>
+  <button id="btn15">15 seconds</button>
+
+  <div id="customPrompt">
+    <p>Please enter your characters:</p>
+    <input type="text" id="promptInput">
+  </div>
+  <div id="counterOutput"></div>
+
+  <h2>Calculator</h2>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" id="numberInput">
+  <button id="calculateButton">Calculate</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Multiplier</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody id="calculatorOutput">
+      <tr>
+        <td>0.6</td>
+        <td id="result0.6">-</td>
+      </tr>
+      <tr>
+        <td>0.9</td>
+        <td id="result0.9">-</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td id="result1">-</td>
+      </tr>
+      <tr>
+        <td>1.05</td>
+        <td id="result1.05">-</td>
+      </tr>
+      <tr>
+        <td>1.1</td>
+        <td id="result1.1">-</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="combined.js"></script>
+  <audio id="beep" src="beep.mp3"></audio>
+</body>
+</html>
