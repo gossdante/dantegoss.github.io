@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Combined Timer, Counter, Calculator App</title>
-  <style>
-    #customPrompt {
-      display: none;
-    }
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      padding: 5px;
-    }
-  </style>
-</head>
-<body>
+  <head>
+		<title>Combined Timer, Step Counter, and Calculator for CAD Study</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<style>
+      #customPrompt {
+        display: none;
+      }
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+      #timeDisplay {
+        background-color: red;
+        color: white;
+        font-size: 3em;
+        text-align: center;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+<body class="is-preload">
+  <!-- Header -->
+  <header id="header">
+    <div class="inner">
+        <br>
+        <a href="images/2021 Oct Headshot 3 - Copy.jpg" class="image avatar" width="200"><img src="images/2021 Oct Headshot 3 - Copy.jpg" alt="Avatar" style="border: 3px solid white;" /></a>
+        <h1><strong>Dante Goss</strong> </h1>
+        <h4>Kinesiology PhD Student <br> University of Virginia</h4>					
+    </div>
+  </header>
+
+
+  <!-- Main -->
+  <div id="main">
+  <nav class="menu" id="nav" display: inline;>
+    <style>
+      .nav {
+        background-color: white;
+        list-style-type: none;
+        text-align: center; 
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav li {
+        display: inline-block;
+        font-size: 30px;
+        padding: 5px;
+      }
+    </style>
+    <ul class = "nav">					
+      
+      <li><a href="index.html">Home </a></li>						
+      <li><a href="Resume.html"> Resume</a></li>
+      <li><a href="Presentations.html">Presentations</a></li>
+      <li><a href="Projects.html">Projects</a></li>
+      
+    </ul>
+  </nav>
   <h1>Timer, Keystroke Counter, and Calculator</h1>
   
   <div>
-    <h2>Setup Timer</h2>
+    <h2>Timer</h2>
     <label for="timerDuration">Duration (minutes):</label>
     <input type="number" id="timerDuration" value="5"><br>
     <label for="reminder1Time">First Reminder (minutes left):</label>
