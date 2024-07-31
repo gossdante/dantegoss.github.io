@@ -5,13 +5,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<style>
+      body {
+        width: 95%;
+        margin: auto;
+      }
       #customPrompt {
         display: none;
       }
       table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
-        padding: 5px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
       #timeDisplay {
         background-color: red;
@@ -22,19 +28,40 @@
         margin: 20px 0;
         border-radius: 10px;
       }
+      .section {
+        margin: 10px 0;
+      }
+      label, input, button {
+        display: inline-block;
+        width: 200px;
+        font-size: 1.2em;
+        padding: 5px;
+      }
+      .nav {
+        background-color: white;
+        list-style-type: none;
+        text-align: center; 
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+      .nav li {
+        display: inline-block;
+        font-size: 30px;
+        padding: 5px;
+      }
+      h1, h2 {
+        margin-top: 40px;
+      }
+      hr {
+        margin: 10px 0;
+        border-width: 3px;
+        color: black;
+        border-color: black;
+      }
     </style>
-    <link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 <body class="is-preload">
-  <!-- Header -->
-  <header id="header">
-    <div class="inner">
-        <br>
-        <a href="images/2021 Oct Headshot 3 - Copy.jpg" class="image avatar" width="200"><img src="images/2021 Oct Headshot 3 - Copy.jpg" alt="Avatar" style="border: 3px solid white;" /></a>
-        <h1><strong>Dante Goss</strong> </h1>
-        <h4>Kinesiology PhD Student <br> University of Virginia</h4>					
-    </div>
-  </header>
+  
 
 
   <!-- Main -->
@@ -66,6 +93,8 @@
   </nav>
   <h1>Timer, Keystroke Counter, and Calculator</h1>
   
+  <hr>
+
   <div>
     <h2>Timer</h2>
     <label for="timerDuration">Duration (minutes):</label>
@@ -88,6 +117,8 @@
   <div id="timeDisplay">Time left: 5:00</div>
   <div id="reminderDisplay"></div>
 
+  <hr>
+  
   <h2>Keystroke Counter</h2>
   <button id="btn60">60 seconds</button>
   <button id="btn30">30 seconds</button>
@@ -98,9 +129,12 @@
     <input type="text" id="promptInput">
   </div>
   <div id="counterOutput"></div>
+  
+  <hr>
 
   <h2>Calculator</h2>
   <label for="numberInput">Enter a number:</label>
+  <br>
   <input type="number" id="numberInput">
   <button id="calculateButton">Calculate</button>
   <table>
@@ -134,6 +168,8 @@
     </tbody>
   </table>
 
+  <hr>
+  
   <script src="combined.js"></script>
   <audio id="beep" src="beep.mp3"></audio>
 </body>
