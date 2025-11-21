@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('result1').textContent = (number * 1).toFixed(2);
       document.getElementById('result1.05').textContent = (number * 1.05).toFixed(2);
       document.getElementById('result1.1').textContent = (number * 1.1).toFixed(2);
+      document.getElementById('result1.2').textContent = (number * 1.2).toFixed(2);
     }
   });
 });
